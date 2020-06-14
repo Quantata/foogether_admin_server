@@ -36,12 +36,24 @@ public class Question {
     String emailAddr;
 
     // 상태
+    @Enumerated(EnumType.STRING)
     @Column(name = "question_status")
     QuestionStatus questionStatus;
 
     // 내용
     @Column(name = "question_content")
     String content;
+
+
+    @PrePersist
+    public void prePersist() {
+        this.questionStatus = this.questionStatus == null ? QuestionStatus.NONCOMPLETE : this.questionStatus;
+    }
+
+//    @PreUpdate
+//    public void preUpdate() {
+//        this.questionStatus = this.questionStatus == null ? QuestionStatus.NONCOMPLETE : this.questionStatus;
+//    }
 
     @Builder
     public Question(int idx, String category, QuestionStatus questionStatus, String content

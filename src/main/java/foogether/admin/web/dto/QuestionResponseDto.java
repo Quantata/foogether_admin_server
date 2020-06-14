@@ -3,6 +3,7 @@ package foogether.admin.web.dto;
 import foogether.admin.domain.Entity.Notice;
 import foogether.admin.domain.Entity.Question;
 import foogether.admin.domain.QuestionStatus;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,4 +26,16 @@ public class QuestionResponseDto {
         this.content = entity.getContent();
         this.createdDate = entity.getCreatedDate();
     }
+
+
+    @Builder
+    public QuestionResponseDto(int idx, String category, QuestionStatus questionStatus, String content, LocalDateTime createdDate) {
+        this.idx = idx;
+        this.category = category;
+        this.questionStatus = questionStatus;
+        this.content = content;
+        this.createdDate = createdDate;
+    }
+
+
 }

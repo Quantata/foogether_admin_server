@@ -17,6 +17,8 @@ public class ResponseMessage {
     public static final String BAD_PARAMETER = "파라미터 값이 잘못되었습니다.";
     public static final String NOT_FOUND_QUESTIONS = "작성된 문의사항이 없습니다.";
     public static final String FIND_ALL_QUESTIONS = "문의사항 조회 완료";
+    public static final String QUESTION_COMPLETE = "문의사항 답변 완료";
+    public static final String SAVE_QUESTIONS = "문의사항 작성 완료";
 
 
     public static final String NOT_FOUND_NOTICES = "작성된 공지사항이 없습니다.";
