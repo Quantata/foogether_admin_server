@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "JWT.SECRET",
+      "type": "java.lang.String",
+      "description": "Description for JWT.SECRET."
+  }
+] }
